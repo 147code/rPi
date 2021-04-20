@@ -11,6 +11,8 @@ sudo apt install vim htop tree lolcat figlet omxplayer mutt git
 echo " - - - - - - - - - - .bash_aliases - - - - - - - - - - "
 cd ~/
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.bash_aliases
+echo " - - - - - - - - - - .vimrc - - - - - - - - - - "
+wget -L https://raw.githubusercontent.com/147code/rPi/main/.vimrc
 cd -
 
 echo " - - - - - - - - - - mnt - - - - - - - - - - "
