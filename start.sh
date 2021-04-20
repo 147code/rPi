@@ -1,10 +1,12 @@
+#!/usr/bin/env bash
+
 echo " - - - - - - - - - - UPDATE - - - - - - - - - - "
 sudo apt update
 echo " - - - - - - - - - - UPGRADE - - - - - - - - - - "
 sudo apt upgrade
 
 echo " - - - - - - - - - - INSTALL - - - - - - - - - - "
-sudo apt install vim htop tree lolcat figlet omxplayer 
+sudo apt install vim htop tree lolcat figlet omxplayer mutt git 
 
 echo " - - - - - - - - - - .bash_aliases - - - - - - - - - - "
 cd ~/
@@ -18,6 +20,10 @@ sudo mount -a
 
 echo " - - - - - - - - - - SSH - - - - - - - - - - "
 mkdir ~/.ssh
-cp /mnt/SanDisk_64_GB/.rPi_setup/.ak ~/.ssh/authorized_keys
-sudo chmod 700 ~/.ssh/
-sudo chmod 600 ~/.ssh/ *
+mv ~/uploaded_key.pub  ~/.ssh/authorized_keys
+#sudo chmod 700 ~/.ssh/
+#sudo chmod 600 ~/.ssh/ *
+
+echo " - - - - - - - - - - CLEANING - - - - - - - - - - 
+sudo rm -r start.sh
+sudo rm -r wget-hsts
