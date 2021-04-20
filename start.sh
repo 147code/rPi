@@ -1,1 +1,23 @@
+echo " - - - - - - - - - - UPDATE - - - - - - - - - - "
+sudo apt update
+echo " - - - - - - - - - - UPGRADE - - - - - - - - - - "
+sudo apt upgrade
+
+echo " - - - - - - - - - - INSTALL - - - - - - - - - - "
+sudo apt install vim htop tree lolcat figlet omxplayer 
+
+echo " - - - - - - - - - - .bash_aliases - - - - - - - - - - "
+cd ~/
+wget -L https://raw.githubusercontent.com/147code/rPi/main/.bash_aliases
+cd -
+
+echo " - - - - - - - - - - mnt - - - - - - - - - - "
+sudo mkdir -p /mnt/SanDisk_64_GB
+echo "UUID=440df52a-ce02-4eed-a1f3-3f6ed5779169 /mnt/SanDisk_64_GB ext4 defaults 0 1" | sudo tee -a /etc/fstab
+sudo mount -a
+
+echo " - - - - - - - - - - SSH - - - - - - - - - - "
 mkdir ~/.ssh
+cp /mnt/SanDisk_64_GB/.rPi_setup/.ak ~/.ssh/authorized_keys
+sudo chmod 700 ~/.ssh/
+sudo chmod 600 ~/.ssh/ *
