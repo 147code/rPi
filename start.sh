@@ -13,7 +13,7 @@ cd ~/
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.bash_aliases
 echo " - - - - - - - - - - .vimrc - - - - - - - - - - "
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.vimrc
-sudo mkdir ~/.vim/undodir 
+sudo mkdir -p ~/.vim/undodir 
 cd -
 
 echo " - - - - - - - - - - mnt - - - - - - - - - - "
