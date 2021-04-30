@@ -13,7 +13,9 @@ curl -sSL install.domoticz.com | sudo bash
 
 echo " - - - - - - - - - - .bash_aliases & .vimrc - - - - - - - - - - "
 cd ~/
+sudo mkdir .backup
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.bash_aliases
+sudo cp .bashrc .backup/.bashrc___factory
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.bashrc
 source .bashrc
 
@@ -35,5 +37,5 @@ mv ~/uploaded_key.pub  ~/.ssh/authorized_keys
 #sudo chmod 600 ~/.ssh/ *
 
 echo " - - - - - - - - - - CLEANING - - - - - - - - - - 
-sudo rm -r start.sh
+#sudo rm -r start.sh
 sudo rm -r wget-hsts
