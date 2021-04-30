@@ -8,13 +8,18 @@ sudo apt upgrade
 echo " - - - - - - - - - - INSTALL - - - - - - - - - - "
 sudo apt install vim htop tree lolcat figlet omxplayer mutt git docker 
 
+echo " - - - - - - - - - - DOMOTICZ - - - - - - - - - - "
+curl -sSL install.domoticz.com | sudo bash
+
 echo " - - - - - - - - - - .bash_aliases & .vimrc - - - - - - - - - - "
 cd ~/
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.bash_aliases
+wget -L https://raw.githubusercontent.com/147code/rPi/main/.bashrc
+source .bashrc
+
 wget -L https://raw.githubusercontent.com/147code/rPi/main/.vimrc
 sudo mkdir -p ~/.vim/undodir
 cd -
-~/.vim/undodir
 
 echo " - - - - - - - - - - mnt - - - - - - - - - - "
 sudo mkdir -p /mnt/SanDisk_64_GB
