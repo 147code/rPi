@@ -6,7 +6,7 @@ echo " - - - - - - - - - - UPGRADE - - - - - - - - - - "
 sudo apt upgrade
 
 echo " - - - - - - - - - - INSTALL - - - - - - - - - - "
-sudo apt install vim htop tree lolcat figlet omxplayer mutt git samba 
+sudo apt install vim htop tree lolcat figlet omxplayer mutt git docker 
 
 echo " - - - - - - - - - - .bash_aliases - - - - - - - - - - "
 cd ~/
